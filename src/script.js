@@ -26,7 +26,7 @@ function fight(player1, player2, player1Health, player2Health) {
     if (attacker === player1) {
       player2Health = attackPlayer(player2Health);
       logHealth(player2, player2Health);
-      if (player2Health <= 0) {
+      if (isDead(player2Health)) {
         logDeath(player1, player2);
         break;
       }
@@ -44,7 +44,3 @@ function fight(player1, player2, player1Health, player2Health) {
 console.log(fight("Steve", "Mitch", 100, 100));
 
 // ------Extended Challenges
-
-const printSquare = (width) => {};
-
-printSquare();
